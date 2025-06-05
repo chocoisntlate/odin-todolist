@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    color: #111827;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#header {
+    background-color: rgb(143, 58, 58);
+    padding: 50px;
+    border-bottom: 1px solid #e5e7eb;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title, #description {
+    color: white;
+}
+
+#title {
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4em;
+    font-weight: lighter;
+}
+
+#content {
+    background-color: #f9fafb;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.button {
+    background-color: #dbdcdf;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.button:hover {
+    background-color: #b5b5b7;
+}
+
+.project-delete-button {
+    
+}
