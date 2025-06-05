@@ -1,7 +1,12 @@
 
 class project{
-    constructor() {
+    constructor(name) {
+        this.name = name
         this.items = []
+    }
+
+    getItems() {
+        return this.items
     }
 
     addItem(item) {
@@ -12,3 +17,5 @@ class project{
         this.items = this.items.filter(item => item.id !== id);
     }
 }
+
+export default project
