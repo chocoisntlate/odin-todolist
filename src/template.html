@@ -11,6 +11,21 @@
         <div id="title">Tododoodoo</div>
         <div id="description">A simple todo-list manager</div>
     </div>
+    <dialog id="item-details-dialog" class="dialog">
+        <div class="detail-header">Todo Details</div>
+        <div class="detail-content" id="detail-content">
+            <span class="detail-header">Name</span>
+            <span class="detail-text" id="name-detail-text"></span>
+            <span class="detail-header">Priority</span>
+            <span class="detail-text" id="priority-detail-text"></span>
+            <span class="detail-header">Description</span>
+            <span class="detail-text" id="description-detail-text"></span>
+            <span class="detail-header">Due Date</span>
+            <span class="detail-text" id="due-detail-text"></span>
+        </div>
+        <div class="detail-bottom">
+        </div>
+    </dialog>
     <div id="content">
         <div class="project-bar">
             <div class="button" id="create-project-button">
@@ -27,9 +42,9 @@
             <div class="button" id="create-task-button">Create new task</div>
             <div class="item-container">
                 <input type="checkbox">
-                <img src="./assets/information-1535-svgrepo-com.svg" id="i-svg" alt="">
+                <img src="./assets/information-1535-svgrepo-com.svg" class="i-svg" alt="">
                 <span class="item-title">title</span>
-                <img src="./assets/bin-svgrepo-com.svg" id="bin-svg" alt="">
+                <img src="./assets/bin-svgrepo-com.svg" class="bin-svg" alt="">
             </div>
         </div>
     </div>

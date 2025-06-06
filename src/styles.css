@@ -92,7 +92,7 @@ body {
     width: 20px;
 }
 
-#i-svg, #bin-svg {
+.i-svg, .bin-svg {
     width: 15px;
 }
 
@@ -126,4 +126,27 @@ body {
 #create-task-button {
     margin-bottom: 20px;
     padding: 5px;
+}
+
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 10px;
+    border: none;
+}
+
+.dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dialog:focus {
+    outline: none;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
 }
