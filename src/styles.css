@@ -122,3 +122,8 @@ body {
 .item-title {
     margin-right: auto;
 }
+
+#create-task-button {
+    margin-bottom: 20px;
+    padding: 5px;
+}
