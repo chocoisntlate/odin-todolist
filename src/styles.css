@@ -150,3 +150,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.crossed-out {
+    text-decoration:line-through;
+}
