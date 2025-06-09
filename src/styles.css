@@ -101,7 +101,7 @@ body {
     color: #34373d;
 }
 
-#project-content {
+#project-area {
     background-color: #ffffff;
     padding: 50px;
     border: 1px solid rgb(197, 197, 197);
@@ -153,4 +153,9 @@ body {
 
 .crossed-out {
     text-decoration:line-through;
+    color: grey;
+}
+
+.bin-svg {
+    margin-left: auto;
 }

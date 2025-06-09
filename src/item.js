@@ -8,7 +8,7 @@ class item {
         this.priority = priority
 
         this.completed = false;
-        this.itemID = crypto.randomUUID();
+        this.ID = crypto.randomUUID();
     }
 
     toggleCompletion() {

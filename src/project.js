@@ -13,8 +13,9 @@ class project{
         this.items.push(item);
     }
 
-    deleteItemById(id) {
-        this.items = this.items.filter(item => item.id !== id);
+    deleteItemByID(id) {
+        console.log("hi");
+        this.items = this.items.filter(item => item.ID !== id);
     }
 }
 
