@@ -48,6 +48,7 @@ body {
     background-color: #dbdcdf;
     border: none;
     border-radius: 5px;
+    padding: 5px;
 
     display: flex;
     align-items: center;
@@ -97,7 +98,6 @@ body {
 }
 
 #create-project-button {
-    padding: 5px;
     color: #34373d;
 }
 
@@ -106,6 +106,7 @@ body {
     padding: 50px;
     border: 1px solid rgb(197, 197, 197);
     border-radius: 10px;
+    min-width: 450px;
 
     flex: 1;
     
@@ -158,4 +159,12 @@ body {
 
 .bin-svg {
     margin-left: auto;
+}
+
+.detail-header {
+    font-weight: bold;
+}
+
+.detail-text {
+    margin-bottom: 20px;
 }
