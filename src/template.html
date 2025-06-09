@@ -26,6 +26,28 @@
             <div id="detail-close-button" class="button">Close</div>
         </div>
     </dialog>
+    
+    <dialog id="create-task-dialog" class="dialog">
+        <form id="create-task-form">
+            <p>
+                <label for="title-input">Task Name</label>
+                <input required type="text" id="title-input" name="title-input">
+                <label for="priority">Priority</label>
+                <select required name="priority" id="priority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <label required for="description">Description</label>
+                <input type="text" id="description" name="description">
+                <label required for="due">Due Date</label>
+                <input type="date" id="due" name="due">
+            </p>
+
+            <div id="create-task-button" class="button">Submit</div>
+        </form>
+    </dialog>
+
     <div id="content">
         <div class="project-bar">
             <div class="button" id="create-project-button">

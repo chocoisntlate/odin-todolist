@@ -11,4 +11,8 @@ function infoCloseButton() {
     })
 }
 
+function createTaskButton() {
+    
+}
+
 export default setupAllDialogButtons

@@ -15,4 +15,4 @@ project1.addItem(item2);
 
 console.log(project1.getItems())
 displayProject(project1)
-// document.getElementById('myDialog').showModal();
+document.getElementById('create-task-dialog').showModal();

@@ -168,3 +168,24 @@ body {
 .detail-text {
     margin-bottom: 20px;
 }
+
+#create-task-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#create-task-form label {
+    display: block;
+}
+
+#create-task-form select, #create-task-form input {
+    width: 400px;
+    height: 30px;
+    border: 1px solid grey;
+    margin-bottom: 10px;
+}
+
+#create-task-button {
+    margin-top: 20px;
+}
