@@ -32,19 +32,22 @@
             <p>
                 <label for="title-input">Task Name</label>
                 <input required type="text" id="title-input" name="title-input">
+
                 <label for="priority">Priority</label>
                 <select required name="priority" id="priority">
                     <option value="High">High</option>
                     <option value="Medium">Medium</option>
                     <option value="Low">Low</option>
                 </select>
-                <label required for="description">Description</label>
-                <input type="text" id="description" name="description">
+
+                <label for="description-input">Description</label>
+                <input required type="text" id="description-input" name="description-input">
+
                 <label required for="due">Due Date</label>
                 <input type="date" id="due" name="due">
             </p>
 
-            <div id="create-task-button" class="button">Submit</div>
+            <div id="create-task-submit-button" class="button">Submit</div>
         </form>
     </dialog>
 

@@ -1,0 +1,13 @@
+export function setUpAllPageButtons() {
+    createNewTaskButton()
+
+}
+
+function createNewTaskButton() {
+    let createButton = document.getElementById('create-task-button')
+    let dialog = document.getElementById("create-task-dialog")
+
+    createButton.addEventListener('click', function(e) {
+        dialog.showModal()
+    })
+}

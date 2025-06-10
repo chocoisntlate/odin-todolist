@@ -17,7 +17,7 @@ function displayInfo(item) {
     name.textContent = item.title
     priority.textContent = item.priority
     description.textContent = item.description
-    dueDate.textContent = item.dueDate
+    dueDate.textContent = item.due
 
     document.getElementById("item-details-dialog").showModal()
 }

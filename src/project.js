@@ -1,5 +1,5 @@
 
-class project{
+class Project{
     constructor(name) {
         this.name = name
         this.items = []
@@ -19,4 +19,4 @@ class project{
     }
 }
 
-export default project
+export default Project
