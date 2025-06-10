@@ -117,6 +117,9 @@ body {
     
 }
 
+#item-details-dialog {
+    width: 500px;
+}
 .item-container {
     padding: 10px;
     display: flex;

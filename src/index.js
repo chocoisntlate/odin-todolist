@@ -14,11 +14,13 @@ let projectManager = new ProjectManager()
 // Example project and items
 let project1 = createProject("Project 1")
 
-let item1 = new item("finish the project", "do it now", "2025-06-18", "high")
-let item2 = new item("finish the project2", "do it now", "2025-06-18", "high")
+let item1 = new item("finish the project", "yahoo", "2025-06-18", "High")
+let item2 = new item("get good", "do it now", "2025-06-19", "Medium")
 project1.addItem(item1);
 project1.addItem(item2);
 switchProject(project1)
+let button =  document.querySelector('.project-button')
+button.classList.add('active') // manually adding active classlists
 
 // Initialising a project manager
 
