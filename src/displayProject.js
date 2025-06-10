@@ -7,6 +7,10 @@ function displayProject(project) {
     let projectContent = document.getElementById("project-content")
     projectContent.textContent = ""
 
+    if (project == null) {
+        return
+    }
+
     for (let item of project.items) {
         let itemContainer = document.createElement('div')
         itemContainer.setAttribute("class", "item-container")

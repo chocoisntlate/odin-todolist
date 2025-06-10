@@ -31,36 +31,43 @@
         <form id="create-task-form">
             <p>
                 <label for="title-input">Task Name</label>
-                <input required type="text" id="title-input" name="title-input">
+                <input type="text" id="title-input" name="title-input">
 
                 <label for="priority">Priority</label>
-                <select required name="priority" id="priority">
+                <select name="priority" id="priority">
                     <option value="High">High</option>
                     <option value="Medium">Medium</option>
                     <option value="Low">Low</option>
                 </select>
 
                 <label for="description-input">Description</label>
-                <input required type="text" id="description-input" name="description-input">
+                <input type="text" id="description-input" name="description-input">
 
-                <label required for="due">Due Date</label>
+                <label for="due">Due Date</label>
                 <input type="date" id="due" name="due">
             </p>
 
-            <div id="create-task-submit-button" class="button">Submit</div>
+            <button id="create-task-submit-button" class="button" type="submit">Submit</button>
+        </form>
+    </dialog>
+
+    <dialog id="create-project-dialog" class="dialog">
+        <form id="create-project-form">
+            <p>
+                <label for="project-name-input">Project Name</label>
+                <input type="text" id="project-name-input" name="project-name-input">
+            </p>
+            <button id="create-project-submit-button" class="button" type="submit">Submit</button>
+            <!-- <div id="create-project-submit-button" class="button">Submit</div> -->
         </form>
     </dialog>
 
     <div id="content">
-        <div class="project-bar">
+        <div id="project-bar">
             <div class="button" id="create-project-button">
                 <img id="add-svg"  src="./assets/add-svgrepo-com.svg" alt="">
             </div>
 
-            <div class="button project-button">
-                <span>Project 1</span>
-                <button class="project-delete-button">x</button>
-            </div>
         </div>
 
         <div id="project-area">

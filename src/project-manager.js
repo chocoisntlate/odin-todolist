@@ -1,10 +1,13 @@
+import Project from "./project"
+
 export class ProjectManager{
-    constructor(project) {
-        this.projectList = [project]
-        this.activeProject = project
+    constructor() {
+        this.projectList = []
+        this.activeProject;
     }
 
-    addProject() {
+    addProject(projectObject) {
+        this.projectList.push(projectObject)
 
     }
 
@@ -14,6 +17,10 @@ export class ProjectManager{
 
     setActiveProject(project) {
         this.activeProject = project
+    }
+
+    deleteProjectByID(projectId) {
+        this.projectList = this.projectList.filter(project => project.id !== projectId);
     }
 
 }

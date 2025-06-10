@@ -3,6 +3,7 @@ class Project{
     constructor(name) {
         this.name = name
         this.items = []
+        this.id = crypto.randomUUID()
     }
 
     getItems() {

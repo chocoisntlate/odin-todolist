@@ -63,6 +63,11 @@ body {
     width: 200px;
 }
 
+.project-button.active {
+    background-color: #b5b5b7;
+    font-weight:500;
+}
+
 .button span {
     margin-right: auto;
 }
@@ -84,7 +89,7 @@ body {
     color: #e6726e;
 }
 
-.project-bar {
+#project-bar {
     display: flex;
     gap: 10px;
 }
@@ -189,3 +194,14 @@ body {
 #create-task-button {
     margin-top: 20px;
 }
+
+#create-project-form p {
+    margin-bottom: 15px;
+}
+
+#create-project-form {
+    display: flex;
+    flex-direction: column;
+}
+
+
