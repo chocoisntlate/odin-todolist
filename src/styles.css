@@ -51,9 +51,13 @@ body {
     padding: 5px;
 
     display: flex;
-    align-items: center;
+    align-items: center;    
     justify-content: center;
     text-align: center;
+}
+
+.button[hidden] {
+    display: none !important;
 }
 
 .project-button {

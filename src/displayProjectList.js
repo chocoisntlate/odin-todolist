@@ -5,6 +5,7 @@ import { storeProjectManager } from "./storage"
 function displayProjectList() {
     let projectBar = document.getElementById("project-list-content")
     projectBar.textContent = ""
+    let activeProject = projectManager.getActiveProject()
 
     for (let projectObject of projectManager.projectList) {
         let projectButton = document.createElement('div')
@@ -22,8 +23,15 @@ function displayProjectList() {
 
         projectButtonEventListener(projectButton, projectObject)
 
+    // setting active project when refresh
+        if (activeProject == projectObject) {
+            activeClassHandling(projectButton)
+        }
+
         projectBar.appendChild(projectButton)
     }
+
+    
 }
 
 function projectButtonEventListener(projectButton, projectObject) {

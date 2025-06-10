@@ -5,11 +5,15 @@ import { createDeleteButton } from './item-delete'
 
 function displayProject(project) {
     let projectContent = document.getElementById("project-content")
+    let createTaskButton = document.getElementById('create-task-button')
     projectContent.textContent = ""
 
     if (project == null) {
+        
+        createTaskButton.setAttribute('hidden', "")
         return
     }
+    createTaskButton.removeAttribute('hidden')
 
     for (let item of project.items) {
         let itemContainer = document.createElement('div')
