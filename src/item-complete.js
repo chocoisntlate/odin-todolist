@@ -1,7 +1,19 @@
-function createCheckbox(titleItem) {
+import { storeProjectManager } from "./storage"
+
+function createCheckbox(item, titleItem) {
     let checkBox = document.createElement('input')
     checkBox.setAttribute("type","checkbox")
-    checkBox.addEventListener('change', () => renderCheckedness(titleItem))
+    
+    if (item.completed == true) {
+        item.setAttribute("checked", "")
+        titleItem.classList.add('crossed-out')
+    }
+
+    checkBox.addEventListener('change', function(e) {
+        item.toggleCompletion()
+        renderCheckedness(titleItem)
+        storeProjectManager()
+    })
     return checkBox
 }
 
@@ -11,7 +23,6 @@ function renderCheckedness(titleItem) {
     } else {
         titleItem.classList.add('crossed-out')
     }
-
 }
 
 export {createCheckbox}

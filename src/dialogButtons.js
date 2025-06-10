@@ -2,6 +2,8 @@ import { projectManager } from "./index.js"
 import item from "./item"
 import { displayProject } from "./displayProject"
 import Project from "./project.js"
+import { storeProjectManager } from "./storage.js"
+import { displayProjectList } from "./displayProjectList.js"
 
 function setupAllDialogButtons() {
     infoCloseButton()
@@ -42,6 +44,7 @@ function createTaskSubmitButton() {
         displayProject(activeProject)
 
         dialog.close()
+        storeProjectManager()
     })
     
 }
@@ -57,6 +60,8 @@ function createNewProjectSubmitButton() {
         createProject(projectNameField.value)
         projectNameField.value = ""
         dialog.close()
+        displayProjectList()
+        storeProjectManager()
     })
 }
 
@@ -68,60 +73,9 @@ export function createProject(projectName) {
     projectManager.addProject(projectObject)
 
     // dom stuff
-    let projectButton = document.createElement('div')
-    projectButton.classList.add('button', 'project-button')
-    projectButton.setAttribute('data-project-id', projectObject.id)
-    
-    let projectNameElement = document.createElement('span')
-    projectNameElement.textContent = projectName
 
-    let deleteButtonElement = createAttachingeDeleteProjectButton(projectButton, projectObject.id)
-
-
-    projectButton.appendChild(projectNameElement)
-    projectButton.appendChild(deleteButtonElement)
-
-    projectButton.addEventListener('click', function(e) {
-        activeClassHandling(projectButton)
-        switchProject(projectObject)
-        projectManager.setActiveProject(projectObject)
-
-    })
-
-    projectBar.appendChild(projectButton)
     return projectObject
-    
 }
 
-export function switchProject(projectObject) {
-    projectManager.setActiveProject(projectObject)
-    displayProject(projectObject)
-
-}
-
-// Must be called before switching project
-function activeClassHandling(newProjectButton) {
-    let projectButtons = document.querySelectorAll('.project-button')
-    projectButtons.forEach(button => button.classList.remove('active'))
-    newProjectButton.classList.add("active")    
-}
-
-// this should be in the pageButtons but I already messed up. Didn't think that far ahead. 
-function createAttachingeDeleteProjectButton(projectButton, projectId) {
-    let deleteButtonElement = document.createElement('button')
-    deleteButtonElement.classList.add("project-delete-button")
-    deleteButtonElement.textContent = "x"
-
-    deleteButtonElement.addEventListener('click', function(e) {
-        e.stopPropagation()
-        console.log(projectId);
-        projectManager.deleteProjectByID(projectId)
-        console.log(projectManager.projectList);
-        projectButton.remove()
-        displayProject(null)
-    })
-
-    return deleteButtonElement
-}
 
 export {setupAllDialogButtons}

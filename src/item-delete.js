@@ -1,5 +1,7 @@
 import binIcon from "./assets/bin-svgrepo-com.svg"
 import { displayProject } from "./displayProject"
+import { storeProjectManager } from "./storage"
+
 
 function createDeleteButton(project, item) {
     let i = document.createElement('img')
@@ -12,6 +14,7 @@ function createDeleteButton(project, item) {
 function deletionActions(project, item) {
     project.deleteItemByID(item.ID)
     displayProject(project)
+    storeProjectManager()
 }
 
 

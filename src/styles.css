@@ -207,4 +207,7 @@ body {
     flex-direction: column;
 }
 
-
+#project-list-content {
+    display: flex;
+    gap: 10px;
+}

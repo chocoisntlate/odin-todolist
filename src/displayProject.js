@@ -20,7 +20,7 @@ function displayProject(project) {
 
         let infoButton = createInfoButton(item)
 
-        let checkBox = createCheckbox(title)
+        let checkBox = createCheckbox(item, title)
         
         let binButton = createDeleteButton(project, item)
 
