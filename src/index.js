@@ -23,12 +23,10 @@ if (!projectManager) {
     switchProject(project1)
     let button =  document.querySelector('.project-button')
     displayProject(project1)
-    // button.classList.add('active') // manually adding active classlists
     } else {
         displayProject(projectManager.projectList[0])
-        projectManager.setActiveProject(projectManager.projectList[0])
-
     }
+projectManager.setActiveProject(projectManager.projectList[0])
 setupAllDialogButtons()
 setUpAllPageButtons()
 displayProjectList()

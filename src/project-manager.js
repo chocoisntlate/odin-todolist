@@ -21,6 +21,9 @@ export class ProjectManager{
 
     deleteProjectByID(projectId) {
         this.projectList = this.projectList.filter(project => project.id !== projectId);
+        if (!this.projectList.includes(this.activeProject)) {
+            this.activeProject = null;
+        }
     }
 
 }
