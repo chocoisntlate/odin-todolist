@@ -54,7 +54,7 @@ function createAttachingeDeleteProjectButton(projectButton, projectId) {
         projectManager.deleteProjectByID(projectId)
         console.log(projectManager.projectList);
         projectButton.remove()
-        displayProject(null)
+        displayProject(projectManager.getActiveProject())
         storeProjectManager()
     })
 
