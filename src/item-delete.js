@@ -19,7 +19,7 @@ function createDeleteButton(project, item) {
 function deletionActions(project, item) {
 
     project.deleteItemByID(item.ID)
-    // displayProject(projectManager.getActiveProject())
+    displayProject(projectManager.getActiveProject())
     storeProjectManager()
 }
 
