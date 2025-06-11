@@ -5,7 +5,7 @@ function createCheckbox(item, titleItem) {
     checkBox.setAttribute("type","checkbox")
     
     if (item.completed == true) {
-        item.setAttribute("checked", "")
+        checkBox.setAttribute("checked", "")
         titleItem.classList.add('crossed-out')
     }
 
